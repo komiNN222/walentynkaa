@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynka</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: red; /* Zmieniono kolor t³a na czerwony */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #d63384;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button#yes {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        button#yes:hover {
+            background-color: #ff3385;
+        }
+
+        button#no {
+            background-color: #ffb3d9;
+            color: black;
+        }
+
+        button#no:hover {
+            background-color: #ff99cc;
+        }
+
+        .response {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Czy zostaniesz moja Walentynka? ??</h1>
+        <div class="buttons">
+            <button id="yes">Tak</button>
+            <button id="no">Nie</button>
+        </div>
+        <div class="response" id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('response').textContent = 'Slodko! ';
+        });
+
+        document.getElementById('no').addEventListener('click', function() {
+            document.getElementById('response').textContent = 'Zla odpowiedz! Co Ty sobie myslisz?';
+        });
+    </script>
+</body>
+</html>
